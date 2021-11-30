@@ -98,7 +98,6 @@ const translate = (string) => {
       }
     },
     "👊": () => {
-      console.log("value", memory[pointer]);
       output += String.fromCharCode(memory[pointer]);
     },
   };
@@ -106,14 +105,6 @@ const translate = (string) => {
   while (stringIndex < arrayOfInstructions.length) {
     const action = arrayOfInstructions[stringIndex];
 
-    // console.log({
-    //   memory,
-    //   value: memory[pointer],
-    //   pointer,
-    //   action,
-    //   stringIndex,
-    //   output,
-    // });
     actions[action]();
 
     stringIndex++;
